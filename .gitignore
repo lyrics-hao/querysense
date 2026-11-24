@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Runtime logs and environment files
+logs/
+*.log
+.env
+.env.*
+!.env.example
+
+# Local credentials
+/conf/app_config.yaml
+/docker/docker-compose.yaml
+
+# Downloaded embedding models and caches
+/docker/embedding/
