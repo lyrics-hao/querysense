@@ -86,16 +86,13 @@ data-agent/
 | `conf/meta_config.yaml` | 业务表、字段、别名、角色与指标口径 |
 | `docker/docker-compose.yaml` | 基础服务端口、数据库凭据与数据卷 |
 
-首次克隆后，在项目根目录从模板创建本地配置，并填写实际连接信息。
-
-```bash
-cp conf/app_config.example.yaml conf/app_config.yaml
-cp docker/docker-compose.example.yaml docker/docker-compose.yaml
-```
+应用配置位于 `conf/app_config.yaml`，基础服务配置位于 `docker/docker-compose.yaml`，运行前填写对应环境的连接信息。
 
 业务库账号配置查询权限，元数据库账号配置读写权限。`bge-large-zh-v1.5` 的向量维度为 1024，需与 `qdrant.embedding_size` 一致。
 
 Embedding 模型存放于 `docker/embedding/bge-large-zh-v1.5/`，包含权重、模型配置与分词器文件。Elasticsearch 使用与 8.19.10 匹配的 IK 插件。[模型下载](https://huggingface.co/BAAI/bge-large-zh-v1.5)
+
+模型权重通过 Git LFS 管理，克隆仓库后执行 `git lfs pull` 获取完整文件。
 
 在项目根目录安装依赖。
 

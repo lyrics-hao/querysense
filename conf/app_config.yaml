@@ -1,0 +1,45 @@
+logging:
+  # 日志输出的两个目的地 文件和控制台
+  file:
+    enable: false    # 是否启用
+    level: INFO     # 日志级别 只会输出info及更严重的级别信息 DEBUG INFO WARNING ERROR CRITICAL
+    path: logs      # 路径
+    rotation: "10 MB" # 每10MB生成一个文件
+    retention: "7 days" # 只保留近七天的日志
+  console:
+    enable: true
+    level: INFO
+
+db_meta:
+  host: 172.16.203.20
+  port: 3306
+  user: atguigu
+  password: Atguigu.123
+  database: meta
+
+db_dw:
+  host: localhost
+  port: 3306
+  user: atguigu
+  password: Atguigu.123
+  database: dw
+
+qdrant:
+  host: localhost
+  port: 6333
+  embedding_size: 1024
+
+embedding:
+  host: localhost
+  port: 8081
+  model: BAAI/bge-large-zh-v1.5
+
+es:
+  host: localhost
+  port: 9200
+  index_name: data_agent
+
+llm:
+  model_name: <model_name>
+  api_key: <api_key>
+  base_url: <base_url>

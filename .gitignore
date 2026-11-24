@@ -22,9 +22,5 @@ logs/
 .env.*
 !.env.example
 
-# Local credentials
-/conf/app_config.yaml
-/docker/docker-compose.yaml
-
-# Downloaded embedding models and caches
-/docker/embedding/
+# Download caches
+**/.cache/
